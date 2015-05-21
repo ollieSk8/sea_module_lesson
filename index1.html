@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<script type="text/javascript" src="seajs/dist/sea.js"></script>
+	<script type="text/javascript">
+	//两个参数：第一个参数,模块的地址
+	//sea的默认根目录：是sea.js这个文件
+	seajs.config({
+	    alias : {
+	    	'base': 'http://php.local/module_lesson/',
+	        // 'js/module1': 'http://php.local/module_lesson/js/module1',
+	        // 'js/module2': 'http://php.local/module_lesson/js/module2'
+	    }
+	});
+	seajs.use('./js/module1',function(ex){
+		ex.show()
+	});
+	seajs.use('./js/module2',function(ex){
+		ex.hehe()
+	});
+	</script>
+</head>
+<body>
+<script type="text/javascript">
+	//exports.show();
+	
+</script>
+</body>
+</html>
